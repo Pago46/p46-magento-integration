@@ -1,0 +1,20 @@
+.pago46.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.checkout-payment-method .payment-method-title .payment-icon {
+    height: 35px !important
+}
+
+.pago46.payment-method-redirect-message {
+    margin-bottom: 1rem;
+}
+
+.pago46.payment-method-redirect-message p {
+    margin-bottom: 0;
+}

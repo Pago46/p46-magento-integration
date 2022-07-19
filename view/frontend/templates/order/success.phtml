@@ -1,0 +1,39 @@
+<?php
+	$order = $block->getOrder();
+?>
+
+<div class="checkout-success">
+	<?php if ($block->getOrderId()) : ?>
+		<?php if ($order['state'] === 'pending_payment') : ?>
+			<p class="success-label">
+				"INFORMACIÓN DE PAGO"
+			</p>
+			<p>
+			Solo falta que completes el pago; para ver los puntos disponibles cercanos a tu ubicación
+			<a href="<?php echo $order->getData('pago46_payment_url')?>" class="pago46-link action primary" target="_blank" ><strong>Haz click acá!</strong></a>
+			</p>
+		<?php endif; ?>
+		<?php if ($block->getCanViewOrder()) : ?>
+			<p><?= $block->escapeHtml(__('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeUrl($block->getViewOrderUrl()), $block->getOrderId())), ['a', 'strong']) ?></p>
+		<?php else : ?>
+			<p><?= $block->escapeHtml(__('Your order # is: <span>%1</span>.', $block->getOrderId()), ['span']) ?></p>
+		<?php endif; ?>
+	<?php endif; ?>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <a class="action primary continue" href="<?= $block->escapeUrl($block->getContinueUrl()) ?>"><span><?= $block->escapeHtml(__('Continue Shopping')) ?></span></a>
+        </div>
+    </div>
+</div>
+
+<style>
+	.pago46-link.action.primary {
+		background: rbg(0,127,60);
+		border: 1px solid rbg(0,127,60);
+	}
+
+	.success-label {
+		padding-top: 25px;
+	}
+</style>

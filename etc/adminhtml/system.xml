@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="pago46method" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label><![CDATA[<div class="pago46-logo-src"></div><div class="pago46 quick_line_text">Acepta pagos en efectivo</div>]]></label>
+                <fieldset_css>pago46 payment_settings</fieldset_css>
+                <frontend_model>Pago46\Cashin\Block\Adminhtml\System\Config\Fieldset\Payment</frontend_model>
+
+                <group id="configuration_details" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="4">
+                    <comment></comment>
+                </group>
+
+                <group id="settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Payment Settings</label>
+                    <field id="active" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/pago46method/active</config_path>
+                    </field>
+                    <field id="title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Title</label>
+                        <config_path>payment/pago46method/title</config_path>
+                    </field>
+                    <field id="next_status" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Order Status after Payment Confirmation</label>
+                        <source_model>Pago46\Cashin\Model\OrderStatus</source_model>
+                        <config_path>payment/pago46method/next_status</config_path>
+                    </field>
+                    <field id="country_code" translate="label comment" sortOrder="3" type="select" showInDefault="1"
+                        showInWebsite="1" showInStore="1">
+                        <label>Merchant Country Code</label>
+                        <config_path>payment/pago46method/country_code</config_path>
+                        <comment>Country where money is collected</comment>
+                        <source_model>Pago46\Cashin\Model\Country</source_model>
+                    </field>
+                    <field id="timeout" translate="label comment" sortOrder="4" type="text" showInDefault="1"
+                        showInWebsite="1" showInStore="1">
+                        <label>Order Timeout</label>
+                        <config_path>payment/pago46method/timeout</config_path>
+                        <validate>validate-number</validate>
+                        <comment>Number of minutes of validity of the order. If the user tries to pay the order after the timeout period, he will not be able to do.</comment>
+                    </field>
+                    <field id="merchant_key" translate="label comment" sortOrder="5" type="text" showInDefault="1"
+                        showInWebsite="1" showInStore="1">
+                        <label>Merchant Key</label>
+                        <config_path>payment/pago46method/merchant_key</config_path>
+                    </field>
+                    <field id="merchant_secret" translate="label comment" sortOrder="6" type="text" showInDefault="1"
+                        showInWebsite="1" showInStore="1">
+                        <label>Merchant Secret</label>
+                        <config_path>payment/pago46method/merchant_secret</config_path>
+                    </field>
+                    <field id="test_mode" translate="label comment" sortOrder="7" type="select" showInDefault="1"
+                        showInWebsite="1" showInStore="1">
+                        <label>Test mode (use sandbox)</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/pago46method/test_mode</config_path>
+                    </field>                
+                </group>
+            </group>
+        </section>
+    </system>
+</config>

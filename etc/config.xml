@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <pago46method>
+                <model>Pago46\Cashin\Model\Pago46</model>
+                <title>Paga en efectivo</title>
+                <active>0</active>
+                <next_status>processing</next_status>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+                <test_mode>1</test_mode>
+                <timeout>1440</timeout>
+            </pago46method>
+        </payment>
+    </default>
+</config>

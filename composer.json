@@ -1,0 +1,30 @@
+{
+  "name": "pago46/cashin-payment-magento2",
+  "type": "magento2-module",
+  "description": "Somos tu aliado para comprar online y pagar en efectivo, estés donde estés y a la hora que sea",
+  "version": "1.0.0",
+  "keywords": [
+    "cash"
+  ],
+  "homepage": "https://www.pago46.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pago46",
+      "email": "support@pago46.com",
+      "homepage": "https://www.pago46.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+	"php": "~7.1.3||~7.2.0||~7.3.0||~7.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pago46\\Cashin\\": ""
+    },
+    "files": [
+        "registration.php"
+    ]
+  }
+}
