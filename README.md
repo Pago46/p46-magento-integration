@@ -1,4 +1,4 @@
-# Integración oficial de Pago46 con Magento 2 (Versión 1.0.0)
+# Integración oficial de Pago46 con Magento 2 (Versión 1.0.1)
 
 Esta extensión permite integrar una tienda Magento 2 con el medio de pago Pago46.  Para obtener más información acerca de Pago46 dirijase a https://www.pago46.com
 
