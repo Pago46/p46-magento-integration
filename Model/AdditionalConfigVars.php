@@ -33,25 +33,25 @@ class AdditionalConfigVars implements ConfigProviderInterface
         $payment_options = "";
         switch ($country_code) {
             case "ARG":
-                $payment_options = "Pago46_Cashin/images/instrucciones_ARG.png";
+                $payment_options = "https://static-magento.pago46.io/arg_network.png";
                 break;
             case "CHL":
-                $payment_options = "Pago46_Cashin/images/instrucciones_CHL.png";
+                $payment_options = "https://static-magento.pago46.io/chl_network.png";
                 break;
             case "MEX":
-                $payment_options = "Pago46_Cashin/images/instrucciones_MEX.png";
+                $payment_options = "https://static-magento.pago46.io/mex_network.png";
                 break;
             case "URY":
-                $payment_options = "Pago46_Cashin/images/instrucciones_URY.png";
+                $payment_options = "https://static-magento.pago46.io/ury_network.png";
                 break;
             case "ECU":
-                $payment_options = "Pago46_Cashin/images/instrucciones_ECU.png";
+                $payment_options = "https://static-magento.pago46.io/ecu_network.png";
                 break;
             case "PER":
-                $payment_options = "Pago46_Cashin/images/instrucciones_PER.png";
+                $payment_options = "https://static-magento.pago46.io/per_network.png";
                 break;
                 default:
-                $payment_options = "Pago46_Cashin/images/instrucciones_ARG.png";
+                $payment_options = "https://static-magento.pago46.io/arg_network.png";
         }
         return $payment_options;
     }
