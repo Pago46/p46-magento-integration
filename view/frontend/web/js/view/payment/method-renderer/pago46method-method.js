@@ -22,7 +22,7 @@ define([
     },
 
     getInstructions: function () {
-      return "<img src='" + require.toUrl(window.checkoutConfig.pago46.payment_options)+ "'</>";
+      return "<img src='" + window.checkoutConfig.pago46.payment_options + "'</>";
     },
 
     afterPlaceOrder: function () {
